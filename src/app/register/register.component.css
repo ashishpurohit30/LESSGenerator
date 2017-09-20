@@ -1,9 +1,8 @@
 .form
 {
-   margin-top: 30px;
-   margin-left: 30px;
-}
 
+
+}
 .bordered-invalid
 {
     border: 2px solid red;
@@ -12,4 +11,27 @@
 .bordered-valid
 {
     border: 2px solid green;
+}
+
+.btn-opacity
+{
+    opacity: 0.3;
+}
+
+.button-style
+{
+    margin-left: 50px;
+}
+
+.submit-position
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.reset-position
+{
+    margin-left: 110px;
+    padding-left: 0px;
+    padding-right: 0px;
 }

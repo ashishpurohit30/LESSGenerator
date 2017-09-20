@@ -1,49 +1,49 @@
-<main>
+
 <div class="form">
-    <fieldset>
-      <legend>Registration Form</legend>
       <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" #formDir="ngForm">
+          <fieldset>
+            <legend>Registration Form</legend>
       <div class="form-row">
-        <div class="form-group col-md-3 ">
+        <div class="form-group col-md-2 ">
           <label for="inputName" class="col-form-label">First Name</label>
           <input type="text" class="form-control" id="inputName" placeholder="First Name" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='fname'>
         </div>
 
-        <div class="form-group col-md-3 ">
+        <div class="form-group col-md-2 ">
           <label for="inputLastName" class="col-form-label">Last Name</label>
-          <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='lname'>
+          <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" [class.bordered-invalid]="!lname.valid && lname.touched" [class.bordered-valid]="lname.valid && lname.touched" [formControl]='lname'>
         </div>
       </div>
 
       <div class="form-row">
-        <div class="form-group col-md-3 ">
+        <div class="form-group col-md-2 ">
           <label for="mobileNumber" class="col-form-label">Mobile Number</label>
-          <input type="text" class="form-control" id="mobileNumber" placeholder="Phone Number" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='mobileNumber'>
+          <input type="text" class="form-control" id="mobileNumber" placeholder="Phone Number" [class.bordered-invalid]="!mobileNumber.valid && mobileNumber.touched" [class.bordered-valid]="mobileNumber.valid && mobileNumber.touched" [formControl]='mobileNumber'>
         </div>
 
-        <div class="form-group col-md-3 ">
-          <label for="email" class="col-form-label">Last Name</label>
-          <input type="text" class="form-control" id="email" placeholder="Email Address" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='email'>
+        <div class="form-group col-md-2 ">
+          <label for="email" class="col-form-label">Email Address</label>
+          <input type="text" class="form-control" id="email" placeholder="Email Address" [class.bordered-invalid]="!email.valid && email.touched" [class.bordered-valid]="email.valid && email.touched" [formControl]='email'>
         </div>
       </div>
 
       <div class="form-row">
-          <div class="form-group col-md-3 ">
+          <div class="form-group col-md-2 ">
             <label for="password" class="col-form-label">Password</label>
-            <input type="text" class="form-control" id="password" placeholder="Enter Password" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='password'>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password" [class.bordered-invalid]="!password.valid && password.touched" [class.bordered-valid]="password.valid && password.touched" [formControl]='password'>
+            <div *ngIf>Password and confirm password must be same</div>
           </div>
   
-          <div class="form-group col-md-3 ">
+          <div class="form-group col-md-2 ">
             <label for="cpassword" class="col-form-label">Confirm Password</label>
-            <input type="text" class="form-control" id="cpassword" placeholder="Re-Enter Password" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='cpassword'>
+            <input type="password" class="form-control" id="cpassword" placeholder="Re-Enter Password" [class.bordered-invalid]="!cpassword.valid && cpassword.touched" [class.bordered-valid]="cpassword.valid && cpassword.touched" [formControl]='cpassword'>
           </div>
         </div>
 
-          <div>
-            <button type="submit" class="btn btn-primary col-md-3">Sign in</button>
-            <button type="button" class="btn btn-danger col-md-3" (click)="formDir.resetForm({})" >Reset</button>
+          <div class="button-style">
+            <button type="submit" class="btn btn-primary col-md-1 submit-position" [disabled]="formGroup.invalid" [class.btn-opacity]="formGroup.invalid" [class.btn-success]="formGroup.valid">Register</button>
+            <button type="button" class="btn btn-danger col-md-1 reset-position" (click)="formDir.resetForm({})" >Reset</button>
           </div>
+        </fieldset>
   </form>
-</fieldset>
 </div>
-</main>

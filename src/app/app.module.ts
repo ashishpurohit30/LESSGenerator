@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+ import { RegisterService } from './register.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,13 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule, NgbModule.forRoot(),FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: 
+  [
+    {
+      provide: RegisterService,
+      useFactory: ():RegisterService=>new RegisterService()
+    }  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

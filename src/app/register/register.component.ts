@@ -8,8 +8,8 @@ import { RegisterService } from '../register.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
-
+export class RegisterComponent implements OnInit 
+{
   formGroup:FormGroup;
   fname:AbstractControl;
   lname:AbstractControl;
@@ -17,9 +17,8 @@ export class RegisterComponent implements OnInit {
   email:AbstractControl;
   password:AbstractControl;
   cpassword:AbstractControl;
-  constructor(private formBuilder:FormBuilder, registerService:RegisterService) 
+  constructor(private formBuilder:FormBuilder,private registerService:RegisterService) 
   { 
-    console.log(registerService.message());
     this.formGroup= formBuilder.group
     ({
       "fname" : ['', Validators.compose([Validators.required,Validators.maxLength(16), Validators.minLength(3)])],
@@ -36,15 +35,27 @@ export class RegisterComponent implements OnInit {
     this.password=this.formGroup.controls['password'];
     this.cpassword=this.formGroup.controls['cpassword'];
   }
-  onSubmit(value):Object
+
+  
+  onSubmit()
   {
-    return value;
+    if(this.formGroup.valid)
+    {
+    console.log('Form is Successfully Submitted');
+    this.registerService.myMethod(this.formGroup.value);
+    }
   }  
+  resetForm()
+  {
+    this.formGroup.reset;
+    console.log('Reset is called');
+  }
+
     emailValidator(control: FormControl): { [s: string]: boolean } 
    {
     if (!control.value.match(/accenture.com$/)) 
     {
-      return {invalidSku: true};
+      return {invalidEmail: true};
     }
   }
   ngOnInit() {

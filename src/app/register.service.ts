@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
 import { RegisterComponent } from '../app/register/register.component';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class RegisterService {
-
+  myMethod$: Observable<any>;
+  private myMethodSubject = new Subject 
   constructor()
    { 
-    //  registerComponent.onSubmit();
-     console.log("Register Service is called");
-     
+     this.myMethod$ = this.myMethodSubject.asObservable();
    }
-   message():String
+   myMethod(data)
    {
-     return "Hello Service";
+     console.log(data);
    }
    
-
-
 }

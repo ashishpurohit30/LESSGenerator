@@ -1,6 +1,6 @@
 
 <div class="form">
-      <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" #formDir="ngForm">
+      <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
           <fieldset>
             <legend>Registration Form</legend>
       <div class="form-row">
@@ -42,7 +42,7 @@
 
           <div class="button-style">
             <button type="submit" class="btn btn-primary col-md-1 submit-position" [disabled]="formGroup.invalid" [class.btn-opacity]="formGroup.invalid" [class.btn-success]="formGroup.valid">Register</button>
-            <button type="button" class="btn btn-danger col-md-1 reset-position" (click)="formDir.resetForm({})" >Reset</button>
+            <button type="button" class="btn btn-danger col-md-1 reset-position" (click)="resetForm(); formValue()" >Reset</button>
           </div>
         </fieldset>
   </form>

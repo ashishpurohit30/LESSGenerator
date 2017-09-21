@@ -23,7 +23,7 @@ import { RegisterComponent } from './register/register.component';
     {
       provide: RegisterService,
       useFactory: ():RegisterService=>new RegisterService()
-    }  
+    }   
   ],
   bootstrap: [AppComponent]
 })

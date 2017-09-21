@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit
     if(this.formGroup.valid)
     {
     console.log('Form is Successfully Submitted');
-    this.registerService.myMethod(this.formGroup.value);
+    this.registerService.myFormData(this.formGroup.value);
     }
   }  
   resetForm()

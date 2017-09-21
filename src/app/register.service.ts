@@ -5,13 +5,13 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class RegisterService {
-  myMethod$: Observable<any>;
-  private myMethodSubject = new Subject 
+  myFormData$: Observable<any>;
+  private myFormDataSubject = new Subject<any>(); 
   constructor()
    { 
-     this.myMethod$ = this.myMethodSubject.asObservable();
+     this.myFormData$ = this.myFormDataSubject.asObservable();
    }
-   myMethod(data)
+   myFormData(data)
    {
      console.log(data);
    }

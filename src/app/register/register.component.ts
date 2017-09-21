@@ -24,9 +24,9 @@ export class RegisterComponent implements OnInit
       "fname" : ['', Validators.compose([Validators.required,Validators.maxLength(16), Validators.minLength(3)])],
       "lname" : ['', Validators.compose([Validators.required,Validators.maxLength(16),Validators.minLength(3)])],
       "mobileNumber" : ['', Validators.compose([Validators.required,Validators.minLength(10),Validators.maxLength(14),Validators.pattern('^[0-9]+$')])],
-      "email" : ['',Validators.compose([Validators.required,Validators.email,this.emailValidator,Validators.minLength(8),Validators.maxLength(40)])],
-      "password": ['',Validators.compose([Validators.required])],
-      "cpassword" : ['',Validators.compose([Validators.required])],
+      "email" : ['',Validators.compose([Validators.required,Validators.email,Validators.minLength(8),Validators.maxLength(40),Validators.pattern(/accenture.com$/i)])],
+      "password": ['',Validators.compose([Validators.required,Validators.minLength(8),Validators.maxLength(20)])],
+      "cpassword" : ['',Validators.compose([Validators.required,Validators.minLength(8),Validators.maxLength(20)])],
     })
     this.fname=this.formGroup.controls['fname'];
     this.lname=this.formGroup.controls['lname'];
@@ -36,29 +36,37 @@ export class RegisterComponent implements OnInit
     this.cpassword=this.formGroup.controls['cpassword'];
   }
 
-  
+  // passwordChecker()
+  // {
+  //   if(this.password.value==this.cpassword.value)
+  //   {
+  //     console.log('Passwords are same');
+  //   }
+  //   else
+  //   {
+  //     console.log('Passwords should be same');
+  //   }
+  //     console.log('password checker is working');
+  // }
+
   onSubmit()
   {
     if(this.formGroup.valid)
     {
     console.log('Form is Successfully Submitted');
     this.registerService.myFormData(this.formGroup.value);
+    this.formGroup.reset();
     }
   }  
   resetForm()
   {
-    this.formGroup.reset;
+    this.formGroup.reset();
     console.log('Reset is called');
   }
 
-    emailValidator(control: FormControl): { [s: string]: boolean } 
-   {
-    if (!control.value.match(/accenture.com$/)) 
-    {
-      return {invalidEmail: true};
-    }
-  }
-  ngOnInit() {
+  ngOnInit() 
+  {
+
   }
 
 }

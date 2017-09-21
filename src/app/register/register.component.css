@@ -15,23 +15,32 @@
 
 .btn-opacity
 {
-    opacity: 0.3;
+    opacity: 0.8;
 }
 
 .button-style
 {
-    margin-left: 50px;
-}
-
-.submit-position
-{
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: 60px;
 }
 
 .reset-position
 {
     margin-left: 110px;
-    padding-left: 0px;
-    padding-right: 0px;
+}
+small{
+    margin-left: 15px;
+}
+div small
+{
+    padding-top: 3px;
+    float: right;
+    color: red;
+}
+
+small.alert{
+    margin: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 4px
 }

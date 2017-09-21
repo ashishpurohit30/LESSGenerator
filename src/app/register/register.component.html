@@ -1,29 +1,41 @@
-
+<div class="container-fluid">
 <div class="form">
       <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
           <fieldset>
             <legend>Registration Form</legend>
       <div class="form-row">
-        <div class="form-group col-md-2 ">
+        <div class="form-group col-md-2">
           <label for="inputName" class="col-form-label">First Name</label>
-          <input type="text" class="form-control" id="inputName" placeholder="First Name" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='fname'>
+          <input type="text" class="form-control" id="inputName" placeholder="Enter First Name" [class.bordered-invalid]="!fname.valid && fname.touched" [class.bordered-valid]="fname.valid && fname.touched" [formControl]='fname' >
+          <div *ngIf="!fname.valid && fname.touched">
+            <small class="alert alert-warning">Must be 3-16 characters.</small>
+          </div>
         </div>
 
         <div class="form-group col-md-2 ">
           <label for="inputLastName" class="col-form-label">Last Name</label>
-          <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" [class.bordered-invalid]="!lname.valid && lname.touched" [class.bordered-valid]="lname.valid && lname.touched" [formControl]='lname'>
+          <input type="text" class="form-control" id="inputLastName" placeholder="Enter Last Name" [class.bordered-invalid]="!lname.valid && lname.touched" [class.bordered-valid]="lname.valid && lname.touched" [formControl]='lname'>
+          <div *ngIf="!lname.valid && lname.touched">
+            <small class="alert alert-warning">Must be 3-16 characters.</small>
+          </div>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-2 ">
           <label for="mobileNumber" class="col-form-label">Mobile Number</label>
-          <input type="text" class="form-control" id="mobileNumber" placeholder="Phone Number" [class.bordered-invalid]="!mobileNumber.valid && mobileNumber.touched" [class.bordered-valid]="mobileNumber.valid && mobileNumber.touched" [formControl]='mobileNumber'>
+          <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Phone Number" [class.bordered-invalid]="!mobileNumber.valid && mobileNumber.touched" [class.bordered-valid]="mobileNumber.valid && mobileNumber.touched" [formControl]='mobileNumber'>
+          <div *ngIf="!mobileNumber.valid && mobileNumber.touched">
+          <small class="alert alert-warning">Must be a valid Mobile Number.</small>
+        </div>
         </div>
 
         <div class="form-group col-md-2 ">
           <label for="email" class="col-form-label">Email Address</label>
-          <input type="text" class="form-control" id="email" placeholder="Email Address" [class.bordered-invalid]="!email.valid && email.touched" [class.bordered-valid]="email.valid && email.touched" [formControl]='email'>
+          <input type="text" class="form-control" id="email" placeholder="Enter Email Address" [class.bordered-invalid]="!email.valid && email.touched" [class.bordered-valid]="email.valid && email.touched" [formControl]='email'>
+          <div *ngIf="!email.valid && email.touched">
+          <small class="alert alert-warning">Must be @accenture.com domain. </small>
+        </div>
         </div>
       </div>
 
@@ -31,19 +43,25 @@
           <div class="form-group col-md-2 ">
             <label for="password" class="col-form-label">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter Password" [class.bordered-invalid]="!password.valid && password.touched" [class.bordered-valid]="password.valid && password.touched" [formControl]='password'>
-            <div *ngIf>Password and confirm password must be same</div>
+            <div *ngIf="!password.valid && password.touched">
+            <small class="alert alert-warning">Must be 8-20 characters long. </small>
+          </div>
           </div>
   
           <div class="form-group col-md-2 ">
             <label for="cpassword" class="col-form-label">Confirm Password</label>
             <input type="password" class="form-control" id="cpassword" placeholder="Re-Enter Password" [class.bordered-invalid]="!cpassword.valid && cpassword.touched" [class.bordered-valid]="cpassword.valid && cpassword.touched" [formControl]='cpassword'>
+            <div *ngIf="!cpassword.valid && cpassword.touched">
+            <small class="alert alert-warning">Passwords should match. </small>
+          </div>
           </div>
         </div>
 
           <div class="button-style">
-            <button type="submit" class="btn btn-primary col-md-1 submit-position" [disabled]="formGroup.invalid" [class.btn-opacity]="formGroup.invalid" [class.btn-success]="formGroup.valid">Register</button>
-            <button type="button" class="btn btn-danger col-md-1 reset-position" (click)="resetForm(); formValue()" >Reset</button>
+            <button type="submit" class="btn btn-secondary col-md-1" [disabled]="formGroup.invalid" [class.btn-opacity]="formGroup.invalid" [class.btn-success]="formGroup.valid">Register</button>
+            <button type="button" class="btn btn-danger col-md-1 reset-position" (click)="resetForm()" >Reset</button>
           </div>
         </fieldset>
   </form>
+</div>
 </div>

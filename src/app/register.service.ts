@@ -14,6 +14,11 @@ export class RegisterService {
    myFormData(data)
    {
      console.log(data);
+     if(data.password!=data.cpassword)
+     {
+       console.log('passwords do not match');
+       
+     }
    }
    
 }

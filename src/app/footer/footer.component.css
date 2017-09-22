@@ -1,0 +1,94 @@
+#header
+{
+position: fixed;
+width: 100%;
+z-index: 5000;
+top: 0px;
+background: rgba(189, 79, 79, 0.6);
+height: 66px;
+}
+footer
+{
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(0, 0, 0);
+}
+footer span
+{
+    color: white;
+    margin-top:10px;
+    font-size: 16px;
+}
+a
+{
+    color:white;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+i
+{   position: absolute;
+    font-size: 24px;
+    top: 7px;
+    right: -1px;
+    left: 0px;
+}
+.link-facebook
+{   display: inline-block;
+    position: relative;
+    background-color: rgb(60,91,155);
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.link-linkedin
+{   display: inline-block;
+    position: relative;
+    background-color: rgb(2,151,189);
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.link-twitter
+{   display: inline-block;
+    position: relative;
+    background-color: rgb(43,170,225);
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.link-youtube
+{   display: inline-block;
+    position: relative;
+    background-color: rgb(254,51,49);
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.icons
+{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.copyright span
+{
+    color: rgb(79,87,79);
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.links
+{
+    padding-bottom: 20px;
+    font-size: 15px; 
+}

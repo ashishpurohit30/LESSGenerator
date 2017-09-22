@@ -1,0 +1,44 @@
+header
+{
+    position: fixed;
+    z-index: 5000;
+    top: 0px;
+    width: 100%;
+}
+.wrapper
+{
+    position: relative;
+    clear: both;
+}
+
+header div nav div
+{
+    background-color: rgba(230, 224, 224, 0.55);
+    height: 70px;    
+}
+img
+{
+    height: 60px;
+    width: 113.1px;
+    margin: 5px -3px 5px 30px;
+}
+a
+{
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #74658D;
+}
+a:hover
+{
+    text-decoration: none;
+}
+.links 
+{
+    margin: 18px 0px 0px 60px;
+}
+.links a
+{
+    font-size: 24px;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}

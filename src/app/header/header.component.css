@@ -1,20 +1,15 @@
 header
 {
-    position: fixed;
-    z-index: 5000;
-    top: 0px;
     width: 100%;
+    border-bottom: 1px solid #d0d4d9;
+    box-shadow: 0px 1px 1px #d0d4d9;
 }
-.wrapper
-{
-    position: relative;
-    clear: both;
-}
+
 
 header div nav div
 {
-    background-color: rgba(230, 224, 224, 0.55);
-    height: 70px;    
+    background-color: rgba(255, 255, 255, 0.55);
+    height: 75px;    
 }
 img
 {
@@ -34,11 +29,15 @@ a:hover
 }
 .links 
 {
-    margin: 18px 0px 0px 60px;
+    margin: 21px 0px 0px 60px;
 }
 .links a
 {
     font-size: 24px;
     color: black;
     font-family: 'Josefin Sans', sans-serif;
+}
+div .row
+{
+    margin-right: 0px;
 }

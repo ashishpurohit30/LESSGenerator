@@ -17,8 +17,9 @@ export class RegisterService {
      if(data.password!=data.cpassword)
      {
        console.log('passwords do not match');
-       
      }
+     else
+     console.log('Passwords Match');
    }
    
 }

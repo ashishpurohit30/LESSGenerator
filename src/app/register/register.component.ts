@@ -36,19 +36,6 @@ export class RegisterComponent implements OnInit
     this.cpassword=this.formGroup.controls['cpassword'];
   }
 
-  // passwordChecker()
-  // {
-  //   if(this.password.value==this.cpassword.value)
-  //   {
-  //     console.log('Passwords are same');
-  //   }
-  //   else
-  //   {
-  //     console.log('Passwords should be same');
-  //   }
-  //     console.log('password checker is working');
-  // }
-
   onSubmit()
   {
     if(this.formGroup.valid)

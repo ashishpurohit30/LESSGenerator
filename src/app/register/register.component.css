@@ -1,8 +1,11 @@
-.form
+form
 {
-    position: relative;
-    
+    width: 1300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
 }
+
 .bordered-invalid
 {
     border: 2px solid red;

@@ -1,0 +1,24 @@
+form
+{
+    position: relative;
+    border: 1px  solid black;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    width: 1300px;
+}
+
+.row span
+{
+    margin-left: 21px;
+}
+
+.btn-login
+{
+    margin-left: 76px;
+}
+
+#chkbox
+{
+    margin-top: 12px;
+}

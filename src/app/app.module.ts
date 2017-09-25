@@ -15,6 +15,9 @@ import { HeaderComponent } from './header/header.component';
 
 import {routes} from './constants/routeConstants';
 
+import { AuthenticationService }  from './login/authentication.service';
+import { LoginGuard }  from './login/login.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,8 @@ import {routes} from './constants/routeConstants';
     {
       provide: RegisterService,
       useFactory: ():RegisterService=>new RegisterService()
-    }
+    },
+    AuthenticationService,LoginGuard
   ],
   bootstrap: [AppComponent]
 })

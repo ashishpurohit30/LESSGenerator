@@ -41,3 +41,10 @@ div .row
 {
     margin-right: 0px;
 }
+
+.main
+{
+    background: linear-gradient(to right, #d7d2cc , #304352);
+    height: 400px;
+    width: 100%;
+}

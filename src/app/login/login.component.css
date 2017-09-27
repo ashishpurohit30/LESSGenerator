@@ -22,3 +22,27 @@ form
 {
     margin-top: 12px;
 }
+
+small{
+    margin-left: 15px;
+}
+
+.custom
+{
+    margin-top: 20px;
+    margin-left: -140px;
+    display: inline-block;
+    color: red;
+}
+
+.relative
+{
+    position: relative;
+    height: 48px;
+}
+
+.absolute
+{
+    position: absolute;
+    right: 0px;
+}

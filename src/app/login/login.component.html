@@ -24,18 +24,24 @@
     </span>
     <span class="col-auto">
         <button type="submit" class="btn btn-primary btn-login" (click)="login(username.value, password.value)">Login</button>
+        <div *ngIf="username.value != password.value">
+            <small class="alert alert-warning custom">Please Enter Correct Credentials</small>
+        </div>
     </span>
 </div>
 </fieldset>
 </form>
 </div>
-
 </div>
 
-<div class="breadcrumb" *ngIf="authService.getUser()">
-        Logged in as <b>{{ authService.getUser() }}</b>
-        <a href (click)="logout()">Log out</a>
-      </div>
+<div *ngIf="authService.getUser()" class="container-fluid clearfix">
+    <div class="row relative">
+        <div class="breadcrumb col-md-auto absolute"> Logged in as <b>{{ authService.getUser() }}</b>
+            <a href (click)="logout()">Log out</a>
+        </div>    
+    </div>
+    <app-form></app-form>   
+</div>
 
 
       

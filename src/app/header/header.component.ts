@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  show= true;
+  toggleShow()
+  {
+    this.show= false;
+  }
+  constructor() 
+  { 
 
-  ngOnInit() {
+  }
+
+  ngOnInit() 
+  {
+    
   }
 
 }

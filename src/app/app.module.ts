@@ -17,6 +17,7 @@ import {routes} from './constants/routeConstants';
 
 import { AuthenticationService }  from './login/authentication.service';
 import { LoginGuard }  from './login/login.guard';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginGuard }  from './login/login.guard';
     RegisterComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule, NgbModule.forRoot(),FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes)

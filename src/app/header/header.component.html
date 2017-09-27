@@ -6,12 +6,21 @@
           <a href="index.html"><img src="/assets/images/less.png">Generator</a>
         </span>
         <span class="links">
-            <a [routerLink]="['login']">Login</a>
+            <a [routerLink]="['login']" (click)="toggleShow()">Login</a>
         </span>
+
+        <span class="links" *ngIf="">
+            <a [routerLink]="['login']" (click)="toggleShow()">LogOut</a>
+        </span>
+
         <span class="links">
-          <a [routerLink]="['register']">Register</a>
+          <a [routerLink]="['register']" (click)="toggleShow()">Register</a>
         </span>
       </div>
     </nav>
   </div>
 </header>
+
+<div class="main" *ngIf="show"> 
+
+</div>

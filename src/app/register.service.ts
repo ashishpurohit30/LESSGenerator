@@ -21,5 +21,5 @@ export class RegisterService {
      else
      console.log('Passwords Match');
    }
-   
+  
 }

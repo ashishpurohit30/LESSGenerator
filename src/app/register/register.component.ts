@@ -44,9 +44,22 @@ export class RegisterComponent implements OnInit
     this.registerService.myFormData(this.formGroup.value);
     this.formGroup.reset();
     }
-  }  
+  }
+  
+  successAlert:boolean=false;
+  successAlertMethod():boolean
+  {
+    if(this.formGroup.valid)
+    {
+    this.successAlert=true;
+    return this.successAlert;
+    }
+    else
+    return this.successAlert;
+  }
   resetForm()
   {
+    this.successAlert=false;
     this.formGroup.reset();
     console.log('Reset is called');
   }

@@ -3,7 +3,7 @@ form
     width: 1300px;
     margin: 20px;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0,.2);
 }
 
 .bordered-invalid
@@ -46,4 +46,14 @@ small.alert{
     padding-right: 8px;
     padding-top: 2px;
     padding-bottom: 4px
+}
+
+.success-alert
+{
+    margin: 20px 0px 0px 59px;
+}
+
+.alert
+{
+    padding: 10px;
 }

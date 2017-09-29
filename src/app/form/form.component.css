@@ -1,4 +1,94 @@
 .top
 {
     margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin-left: 5px;
+}
+label
+{
+    border: 1px solid transparent;
+    background-color: rgb(91,155,213);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+span
+{
+    margin: 10px 0px 10px 0px;
+    display: inline-block;
+    background-color: rgb(91,155,213);
+    color: white;
+    font-size: 20px;
+}
+
+.heading-style
+{
+    padding: 0px 147px 0px 147px;
+    margin-top: 20px;
+}
+
+.btn-style
+{
+    margin: 10px 0px 15px 0px;
+    padding: 10px 20px 10px 20px;   
+}
+
+.btn-block
+{
+    width: 33%;
+    text-align: left
+}
+
+#toggle
+{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#anchor-style
+{
+    padding: 0px 127px 0px 130px;
+    margin-top: 20px;
+}
+
+#body-style
+{
+    padding: 0px 137px;
+    margin-top: 20px;
+}
+
+#fieldset-style
+{
+    padding: 0px 127px;
+    margin-top: 20px;
+}
+
+#legend-style
+{
+    padding: 0px 127px 0px 130px;
+    margin-top: 20px;
+}
+
+#para-style
+{
+    padding: 0px 154px;
+    margin-top: 20px;
+}
+
+#textarea-style
+{
+    padding: 0px 118px;
+    margin-top: 20px;
+}
+
+#submit-btn-style
+{
+    margin: 0px 80px 25px 0px;
+}
+
+.submit-btn-style
+{
+    padding: 10px 60px;
 }

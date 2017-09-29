@@ -9,7 +9,7 @@
             <a [routerLink]="['login']" (click)="toggleShow()">Login</a>
         </span>
 
-        <span class="links" *ngIf="">
+        <span class="links" *ngIf="false">
             <a [routerLink]="['login']" (click)="toggleShow()">LogOut</a>
         </span>
 
@@ -22,5 +22,8 @@
 </header>
 
 <div class="main" *ngIf="show"> 
-
+<div class="content">
+  <a href="https://www.accenture.com/us-en/digital-index" target="_blank">
+  <img src="/assets/images/accenturedigital.png" alt="Accenture Digital" class="img-digital"></a>
+</div>
 </div>

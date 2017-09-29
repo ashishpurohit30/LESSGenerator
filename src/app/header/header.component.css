@@ -44,7 +44,19 @@ div .row
 
 .main
 {
-    background: linear-gradient(to right, #d7d2cc , #304352);
+    background: linear-gradient(to right, #BE5869 , #403A3E);
     height: 400px;
     width: 100%;
+    position: relative;
+}
+.content
+{
+    position: absolute;
+}
+
+.img-digital
+{
+    height: 54.25px;
+    width: 250px;
+    margin-top: 10px;
 }

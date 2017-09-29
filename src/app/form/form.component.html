@@ -1,4 +1,482 @@
+
 <div class="container-fluid">
+
+  <!-- Top content -->
   <div class="row top">
-    Fill in the respective values to be converted into a LESS file. 
+    Fill in the respective values to generate the LESS file. 
+  </div>
+  <hr>
+
+
+    <!-- Row 1 starts for H1 and H2 -->
+
+    <div data-toggle="buttons">
+      <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleHeadingMethod()">Click to show/hide Heading Tag Attributes</button>
+    </div>
+
+    <div id="toggle" *ngIf="toggleHeading">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <form>
+            <span class="heading-style">H1</span>
+              <div class="form-group">
+            <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+            <input type="text" class="col-md-3" id="Font-Family">
+          </div>
+
+          <div class="form-group">
+              <label for="Color" class="col-md-3 form-control-sm">Color</label>
+              <input type="text" class="col-md-3" id="Color">
+            </div>
+
+            <div class="form-group">
+                <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
+                <input type="text" class="col-md-3" id="Font-Size">
+              </div>
+
+              <div class="form-group">
+                  <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                  <input type="text" class="col-md-3" id="Padding">
+                </div>
+
+                <div class="form-group">
+                    <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                    <input type="text" class="col-md-3" id="Margin">
+                  </div>
+        </form>
+      </div>
+
+      <div class="col-md-6 text-center">
+          <form>
+            <span class="heading-style">H2</span>
+            <div class="form-group">
+              <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+              <input type="text" class="col-md-3" id="Font-Family">
+            </div>
+  
+            <div class="form-group">
+                <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                <input type="text" class="col-md-3" id="Color">
+              </div>
+  
+              <div class="form-group">
+                  <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
+                  <input type="text" class="col-md-3" id="Font-Size">
+                </div>
+  
+                <div class="form-group">
+                    <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                    <input type="text" class="col-md-3" id="Padding">
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                      <input type="text" class="col-md-3" id="Margin">
+                    </div>
+          </form>
+        </div>
+
+    </div>
+  
+    <!-- Row 1 ends having H1 and H2 -->
+
+    <div class="row text-center">
+        <div class="col-md-6">
+          <form>
+            <span class="heading-style">H3</span>
+            <div class="form-group">
+              <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+              <input type="text" class="col-md-3" id="Font-Family">
+            </div>
+  
+            <div class="form-group">
+                <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                <input type="text" class="col-md-3" id="Color">
+              </div>
+  
+              <div class="form-group">
+                  <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
+                  <input type="text" class="col-md-3" id="Font-Size">
+                </div>
+  
+                <div class="form-group">
+                    <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                    <input type="text" class="col-md-3" id="Padding">
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                      <input type="text" class="col-md-3" id="Margin">
+                    </div>
+          </form>
+        </div>
+  
+        <div class="col-md-6 text-center">
+            <form>
+              <span class="heading-style">H4</span>
+              <div class="form-group">
+                <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+                <input type="text" class="col-md-3" id="Font-Family">
+              </div>
+    
+              <div class="form-group">
+                  <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                  <input type="text" class="col-md-3" id="Color">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
+                    <input type="text" class="col-md-3" id="Font-Size">
+                  </div>
+    
+                  <div class="form-group">
+                      <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                      <input type="text" class="col-md-3" id="Padding">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                        <input type="text" class="col-md-3" id="Margin">
+                      </div>
+            </form>
+          </div>
+  
+      </div>
+
+
+      <div class="row text-center">
+          <div class="col-md-6">
+            <form>
+              <span class="heading-style">H5</span>
+              <div class="form-group">
+                <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+                <input type="text" class="col-md-3" id="Font-Family">
+              </div>
+    
+              <div class="form-group">
+                  <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                  <input type="text" class="col-md-3" id="Color">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
+                    <input type="text" class="col-md-3" id="Font-Size">
+                  </div>
+    
+                  <div class="form-group">
+                      <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                      <input type="text" class="col-md-3" id="Padding">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                        <input type="text" class="col-md-3" id="Margin">
+                      </div>
+            </form>
+          </div>
+    
+          <div class="col-md-6 text-center">
+              <form>
+                <span class="heading-style">H6</span  >
+                <div class="form-group">
+                  <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+                  <input type="text" class="col-md-3" id="Font-Family">
+                </div>
+      
+                <div class="form-group">
+                    <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                    <input type="text" class="col-md-3" id="Color">
+                  </div>
+      
+                  <div class="form-group">
+                      <label for="Size" class="col-md-3 form-control-sm">Size</label>
+                      <input type="text" class="col-md-3" id="Size">
+                    </div>
+      
+                    <div class="form-group">
+                        <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                        <input type="text" class="col-md-3" id="Padding">
+                      </div>
+      
+                      <div class="form-group">
+                          <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                          <input type="text" class="col-md-3" id="Margin">
+                        </div>
+              </form>
+            </div>
+    
+        </div>
+      </div>
+  <hr>
+      <!--  Heading Tag Form ends -->
+
+      <!-- For Anchor Tag and Body Tag -->
+
+      <div data-toggle="buttons">
+          <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleAnchorMethod()">Click to show/hide Anchor/Body tag Attributes</button>
+        </div>
+    
+        <div id="toggle" *ngIf="toggleAnchor">
+        <div class="row text-center">
+          <div class="col-md-6">
+            <form>
+                <span id="anchor-style">Anchor</span>
+                  <div class="form-group">
+                <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+                <input type="text" class="col-md-3" id="Font">
+              </div>
+    
+              <div class="form-group">
+                  <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                  <input type="text" class="col-md-3" id="Color">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
+                    <input type="text" class="col-md-3" id="Font-Size">
+                  </div>
+    
+                  <div class="form-group">
+                      <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                      <input type="text" class="col-md-3" id="Padding">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                        <input type="text" class="col-md-3" id="Margin">
+                      </div>
+
+
+                      <div class="form-group">
+                          <label for="Active" class="col-md-3 form-control-sm">Active</label>
+                          <input type="text" class="col-md-3" id="Active">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Visited" class="col-md-3 form-control-sm">Visited</label>
+                            <input type="text" class="col-md-3" id="Visited">
+                          </div>
+
+                          <div class="form-group">
+                              <label for="Focus" class="col-md-3 form-control-sm">Focus</label>
+                              <input type="text" class="col-md-3" id="Focus">
+                            </div>
+            </form>
+          </div>
+    
+          <div class="col-md-6 text-center">
+              <form>
+                <span id="body-style">Body</span>
+                <div class="form-group">
+                  <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
+                  <input type="text" class="col-md-3" id="Font-Family">
+                </div>
+      
+                <div class="form-group">
+                    <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                    <input type="text" class="col-md-3" id="Color">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="Background-Color" class="col-md-3 form-control-sm">Background-Color</label>
+                      <input type="text" class="col-md-3" id="Background-Color">
+                    </div>
+
+                  <div class="form-group">
+                      <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
+                      <input type="text" class="col-md-3" id="Font-Size">
+                    </div>
+      
+                    <div class="form-group">
+                        <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                        <input type="text" class="col-md-3" id="Padding">
+                      </div>
+      
+                      <div class="form-group">
+                          <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                          <input type="text" class="col-md-3" id="Margin">
+                        </div>
+
+              </form>
+            </div>
+    
+        </div>
+  </div>
+  <hr>
+  <!-- Anchor and body tag ends -->
+  
+<!-- Fieldset and Legend -->
+
+  <div data-toggle="buttons">
+      <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleLegendMethod()">Click to show/hide FieldSet/Legend tag Attributes</button>
+    </div>
+
+    <div id="toggle" *ngIf="toggleLegend">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <form>
+            <span id="fieldset-style">Fieldset</span>
+
+            <div class="form-group">
+                <label for="Max-Width" class="col-md-3 form-control-sm">Max-Width</label>
+                <input type="text" class="col-md-3" id="Max-Width">
+              </div>  
+
+              <div class="form-group">
+            <label for="Min-Width" class="col-md-3 form-control-sm">Min-Width</label>
+            <input type="text" class="col-md-3" id="Min-Width">
+          </div>
+
+            <div class="form-group">
+                <label for="Border" class="col-md-3 form-control-sm">Border</label>
+                <input type="text" class="col-md-3" id="Border">
+              </div>
+
+              <div class="form-group">
+                  <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                  <input type="text" class="col-md-3" id="Padding">
+                </div>
+
+                <div class="form-group">
+                    <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                    <input type="text" class="col-md-3" id="Margin">
+                  </div>
+
+        </form>
+      </div>
+
+      <div class="col-md-6 text-center">
+          <form>
+            <span id="legend-style">Legend</span>
+
+            <div class="form-group">
+                <label for="Max-Width" class="col-md-3 form-control-sm">Max-Width</label>
+                <input type="text" class="col-md-3" id="Max-Width">
+              </div>
+
+
+            <div class="form-group">
+              <label for="Min-Width" class="col-md-3 form-control-sm">Min-Width</label>
+              <input type="text" class="col-md-3" id="Min-Width">
+            </div>
+  
+            <div class="form-group">
+                <label for="Color" class="col-md-3 form-control-sm">Color</label>
+                <input type="text" class="col-md-3" id="Color">
+              </div>
+  
+              <div class="form-group">
+                  <label for="Display" class="col-md-3 form-control-sm">Display</label>
+                  <input type="text" class="col-md-3" id="Display">
+                </div>
+  
+                <div class="form-group">
+                    <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                    <input type="text" class="col-md-3" id="Padding">
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                      <input type="text" class="col-md-3" id="Margin">
+                    </div>
+
+          </form>
+        </div>
+
+    </div>
+</div>
+<hr>
+<!-- Fieldset/Legend Ends -->
+
+<!-- Para and text area starts -->
+<div data-toggle="buttons">
+    <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleParaMethod()">Click to show/hide Paragraph/Text-Area tag Attributes</button>
+  </div>
+
+  <div id="toggle" *ngIf="togglePara">
+  <div class="row text-center">
+    <div class="col-md-6">
+      <form>
+          <span id="para-style">P</span>
+
+          <div class="form-group">
+              <label for="Max-Width" class="col-md-3 form-control-sm">Max-Width</label>
+              <input type="text" class="col-md-3" id="Max-Width">
+            </div>  
+
+            <div class="form-group">
+          <label for="Min-Width" class="col-md-3 form-control-sm">Min-Width</label>
+          <input type="text" class="col-md-3" id="Min-Width">
+        </div>
+
+          <div class="form-group">
+              <label for="Color" class="col-md-3 form-control-sm">Color</label>
+              <input type="text" class="col-md-3" id="Color">
+            </div>
+
+            <div class="form-group">
+                <label for="Background-Color" class="col-md-3 form-control-sm">Background-Color</label>
+                <input type="text" class="col-md-3" id="Background-Color">
+              </div>
+
+            <div class="form-group">
+                <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                <input type="text" class="col-md-3" id="Padding">
+              </div>
+
+              <div class="form-group">
+                  <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                  <input type="text" class="col-md-3" id="Margin">
+                </div>
+
+      </form>
+    </div>
+
+    <div class="col-md-6 text-center">
+        <form>
+          <span id="textarea-style">Text-Area</span>
+
+          <div class="form-group">
+              <label for="Max-Width" class="col-md-3 form-control-sm">Max-Width</label>
+              <input type="text" class="col-md-3" id="Max-Width">
+            </div>
+
+
+          <div class="form-group">
+            <label for="Min-Width" class="col-md-3 form-control-sm">Min-Width</label>
+            <input type="text" class="col-md-3" id="Min-Width">
+          </div>
+
+          <div class="form-group">
+              <label for="Color" class="col-md-3 form-control-sm">Color</label>
+              <input type="text" class="col-md-3" id="Color">
+            </div>
+
+            <div class="form-group">
+                <label for="Background-Color" class="col-md-3 form-control-sm">Background-Color</label>
+                <input type="text" class="col-md-3" id="Background-Color">
+              </div>
+
+              <div class="form-group">
+                  <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
+                  <input type="text" class="col-md-3" id="Padding">
+                </div>
+
+                <div class="form-group">
+                    <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
+                    <input type="text" class="col-md-3" id="Margin">
+                  </div>
+
+        </form>
+      </div>
+
+  </div>
+
+</div>
+<hr>
+
+<div class="row float-right" id="submit-btn-style">
+  <button class="btn btn-primary btn-group submit-btn-style" type="submit">Submit</button>
+</div>
+  <!-- Container Ends -->
   </div>

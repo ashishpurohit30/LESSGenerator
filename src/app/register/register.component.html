@@ -57,9 +57,14 @@
         </div>
 
           <div class="button-style">
-            <button type="submit" class="btn btn-secondary col-md-1" [disabled]="formGroup.invalid" [class.btn-opacity]="formGroup.invalid" [class.btn-success]="formGroup.valid">Register</button>
+            <button type="submit" class="btn btn-secondary col-md-1" [disabled]="formGroup.invalid" [class.btn-opacity]="formGroup.invalid" [class.btn-success]="formGroup.valid" (click)="successAlertMethod()">Register</button>
             <button type="button" class="btn btn-danger col-md-1 reset-position" (click)="resetForm()" >Reset</button>
           </div>
         </fieldset>
+
+        <div class="col-md-3 success-alert text-center" *ngIf="successAlert">
+        <div class="alert alert-success">User registered successfully</div>
+      </div>
+
   </form>
 </div>

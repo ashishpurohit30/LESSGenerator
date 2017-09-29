@@ -7,9 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  toggleHeading:boolean=false;
+  toggleHeadingMethod()
+  {
+    this.toggleHeading = !this.toggleHeading;
+  }
 
-  ngOnInit() {
+  toggleAnchor:boolean=false;
+  toggleAnchorMethod()
+  {
+    this.toggleAnchor = !this.toggleAnchor;
+  }
+
+  toggleLegend:boolean=false;
+  toggleLegendMethod()
+  {
+    this.toggleLegend = !this.toggleLegend;
+  }
+
+  togglePara:boolean=false;
+  toggleParaMethod()
+  {
+    this.togglePara = !this.togglePara;
+  }
+
+  constructor()
+   { 
+
+   }
+
+  ngOnInit() 
+  {
+
   }
 
 }

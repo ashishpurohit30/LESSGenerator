@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     margin-left: 5px;
+    margin-bottom: 15px;
 }
 label
 {
@@ -26,7 +27,7 @@ span
 
 .heading-style
 {
-    padding: 0px 147px 0px 147px;
+    padding: 0px 150px 0px 150px;
     margin-top: 20px;
 }
 
@@ -49,13 +50,13 @@ span
 
 #anchor-style
 {
-    padding: 0px 127px 0px 130px;
+    padding: 0px 131px;
     margin-top: 20px;
 }
 
 #body-style
 {
-    padding: 0px 137px;
+    padding: 0px 140px;
     margin-top: 20px;
 }
 
@@ -73,13 +74,13 @@ span
 
 #para-style
 {
-    padding: 0px 154px;
+    padding: 0px 157px;
     margin-top: 20px;
 }
 
 #textarea-style
 {
-    padding: 0px 118px;
+    padding: 0px 124px;
     margin-top: 20px;
 }
 

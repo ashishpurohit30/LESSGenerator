@@ -5,38 +5,43 @@ header
     box-shadow: 0px 1px 1px #d0d4d9;
 }
 
-
 header div nav div
 {
     background-color: rgba(255, 255, 255, 0.55);
     height: 75px;    
 }
+
 img
 {
     height: 60px;
     width: 113.1px;
     margin: 5px -3px 5px 30px;
 }
+
 a
 {
     font-family: 'Pacifico', cursive;
     font-size: 28px;
     color: #74658D;
 }
+
 a:hover
 {
     text-decoration: none;
 }
+
 .links 
 {
     margin: 21px 0px 0px 60px;
 }
+
 .links a
 {
     font-size: 24px;
     color: black;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 div .row
 {
     margin-right: 0px;
@@ -44,11 +49,12 @@ div .row
 
 .main
 {
-    background: linear-gradient(to right, #BE5869 , #403A3E);
+    background: linear-gradient(to right, #ffffff , #abbaab);
     height: 400px;
     width: 100%;
     position: relative;
 }
+
 .content
 {
     position: absolute;
@@ -59,4 +65,37 @@ div .row
     height: 54.25px;
     width: 250px;
     margin-top: 10px;
+}
+
+.img-digital-1
+{
+ width: 300px;
+ height: 312.5px;
+ background-image: url("/assets/images/Accenture-Digital-Utility.png");
+ background-size: 300px 312.5px;
+ position: absolute;
+ top: 40px;
+ left: 1000px;
+}
+
+.text-content 
+{
+        text-align: left;
+        font-family: "Graphik Black","Arial Black",Sans-Serif;
+        color: #333!important;
+        top: 109px;
+        left: 954px;
+        position: absolute;
+        font-size: 48px; 
+}
+
+#text-content
+{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 31%;
+    position: absolute;
+    top: 205px;
+    left: 50px;
 }

@@ -10,7 +10,7 @@
         <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleHeadingMethod()">Click to show/hide Heading Tag Attributes</button>
       </div>
 
-    <form>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
       <!-- For H1 and H2 -->
       <div id="toggle" *ngIf="toggleHeading"> <!-- Heading div container starts -->
       <div class="form-row text-center">
@@ -18,27 +18,27 @@
             <span class="heading-style">H1</span>
               <div class="form-group">
                 <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-                <input type="text" class="col-md-3" id="Font-Family">
+                <input type="text" class="col-md-3" id="Font-Family" [formControl]='H1_FontFamily'>
                </div>
 
         <div class="form-group">
             <label for="Color" class="col-md-3 form-control-sm">Color</label>
-            <input type="text" class="col-md-3" id="Color">
+            <input type="text" class="col-md-3" id="Color" [formControl]='H1_Color'>
           </div>
 
           <div class="form-group">
               <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-              <input type="text" class="col-md-3" id="Font-Size">
+              <input type="text" class="col-md-3" id="Font-Size" [formControl]='H1_FontSize'>
             </div>
 
             <div class="form-group">
                 <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-                <input type="text" class="col-md-3" id="Padding">
+                <input type="text" class="col-md-3" id="Padding" [formControl]='H1_Padding'>
               </div>
 
               <div class="form-group">
                   <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-                  <input type="text" class="col-md-3" id="Margin">
+                  <input type="text" class="col-md-3" id="Margin" [formControl]='H1_Margin'>
                 </div>
 
         </div>
@@ -48,27 +48,27 @@
     <span class="heading-style">H2</span>
       <div class="form-group">
         <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-        <input type="text" class="col-md-3" id="Font-Family">
+        <input type="text" class="col-md-3" id="Font-Family" [formControl]='H2_FontFamily'>
        </div>
 
 <div class="form-group">
     <label for="Color" class="col-md-3 form-control-sm">Color</label>
-    <input type="text" class="col-md-3" id="Color">
+    <input type="text" class="col-md-3" id="Color" [formControl]='H2_Color'>
   </div>
 
   <div class="form-group">
       <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-      <input type="text" class="col-md-3" id="Font-Size">
+      <input type="text" class="col-md-3" id="Font-Size" [formControl]='H2_FontSize'>
     </div>
 
     <div class="form-group">
         <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-        <input type="text" class="col-md-3" id="Padding">
+        <input type="text" class="col-md-3" id="Padding" [formControl]='H2_Padding'> 
       </div>
 
       <div class="form-group">
             <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-          <input type="text" class="col-md-3" id="Margin">
+          <input type="text" class="col-md-3" id="Margin" [formControl]='H2_Margin'>
           </div>
 
       </div>
@@ -83,27 +83,27 @@
         <span class="heading-style">H3</span>
           <div class="form-group">
             <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-            <input type="text" class="col-md-3" id="Font-Family">
+            <input type="text" class="col-md-3" id="Font-Family" [formControl]='H3_FontFamily'>
            </div>
 
     <div class="form-group">
         <label for="Color" class="col-md-3 form-control-sm">Color</label>
-        <input type="text" class="col-md-3" id="Color">
+        <input type="text" class="col-md-3" id="Color" [formControl]='H3_Color'>
       </div>
 
       <div class="form-group">
           <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-          <input type="text" class="col-md-3" id="Font-Size">
+          <input type="text" class="col-md-3" id="Font-Size" [formControl]='H3_FontSize'>
         </div>
 
         <div class="form-group">
             <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-            <input type="text" class="col-md-3" id="Padding">
+            <input type="text" class="col-md-3" id="Padding" [formControl]='H3_Padding'>
           </div>
 
           <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-              <input type="text" class="col-md-3" id="Margin">
+              <input type="text" class="col-md-3" id="Margin" [formControl]='H3_Margin'>
             </div>
 
     </div>
@@ -114,27 +114,27 @@
 <span class="heading-style">H4</span>
   <div class="form-group">
     <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-    <input type="text" class="col-md-3" id="Font-Family">
+    <input type="text" class="col-md-3" id="Font-Family" [formControl]='H4_FontFamily'>
    </div>
 
 <div class="form-group">
 <label for="Color" class="col-md-3 form-control-sm">Color</label>
-<input type="text" class="col-md-3" id="Color">
+<input type="text" class="col-md-3" id="Color" [formControl]='H4_Color'>
 </div>
 
 <div class="form-group">
   <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-  <input type="text" class="col-md-3" id="Font-Size">
+  <input type="text" class="col-md-3" id="Font-Size" [formControl]='H4_FontSize'>
 </div>
 
 <div class="form-group">
     <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-    <input type="text" class="col-md-3" id="Padding">
+    <input type="text" class="col-md-3" id="Padding" [formControl]='H4_Padding'>
   </div>
 
   <div class="form-group">
         <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-      <input type="text" class="col-md-3" id="Margin">
+      <input type="text" class="col-md-3" id="Margin" [formControl]='H4_Margin'>
       </div>
 
   </div>
@@ -149,27 +149,27 @@
         <span class="heading-style">H5</span>
           <div class="form-group">
             <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-            <input type="text" class="col-md-3" id="Font-Family">
+            <input type="text" class="col-md-3" id="Font-Family" [formControl]='H5_FontFamily'>
            </div>
 
     <div class="form-group">
         <label for="Color" class="col-md-3 form-control-sm">Color</label>
-        <input type="text" class="col-md-3" id="Color">
+        <input type="text" class="col-md-3" id="Color" [formControl]='H5_Color'>
       </div>
 
       <div class="form-group">
           <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-          <input type="text" class="col-md-3" id="Font-Size">
+          <input type="text" class="col-md-3" id="Font-Size" [formControl]='H5_FontSize'>
         </div>
 
         <div class="form-group">
             <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-            <input type="text" class="col-md-3" id="Padding">
+            <input type="text" class="col-md-3" id="Padding" [formControl]='H5_Padding'> 
           </div>
 
           <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-              <input type="text" class="col-md-3" id="Margin">
+              <input type="text" class="col-md-3" id="Margin" [formControl]='H5_Margin'>
             </div>
 
     </div>
@@ -180,27 +180,27 @@
 <span class="heading-style">H6</span>
   <div class="form-group">
     <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-    <input type="text" class="col-md-3" id="Font-Family">
+    <input type="text" class="col-md-3" id="Font-Family" [formControl]='H6_FontFamily'>
    </div>
 
 <div class="form-group">
 <label for="Color" class="col-md-3 form-control-sm">Color</label>
-<input type="text" class="col-md-3" id="Color">
+<input type="text" class="col-md-3" id="Color" [formControl]='H6_Color'> 
 </div>
 
 <div class="form-group">
   <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-  <input type="text" class="col-md-3" id="Font-Size">
+  <input type="text" class="col-md-3" id="Font-Size" [formControl]='H6_FontSize'>
 </div>
 
 <div class="form-group">
     <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-    <input type="text" class="col-md-3" id="Padding">
+    <input type="text" class="col-md-3" id="Padding" [formControl]='H6_Padding'>
   </div>
 
   <div class="form-group">
         <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-      <input type="text" class="col-md-3" id="Margin">
+      <input type="text" class="col-md-3" id="Margin" [formControl]='H6_Margin'>
       </div>
 
   </div>
@@ -224,42 +224,42 @@
         <span id="anchor-style">Anchor</span>
           <div class="form-group">
             <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-            <input type="text" class="col-md-3" id="Font-Family">
+            <input type="text" class="col-md-3" id="Font-Family" [formControl]='Anchor_FontFamily'>
            </div>
 
     <div class="form-group">
         <label for="Color" class="col-md-3 form-control-sm">Color</label>
-        <input type="text" class="col-md-3" id="Color">
+        <input type="text" class="col-md-3" id="Color" [formControl]='Anchor_Color'>
       </div>
 
       <div class="form-group">
           <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-          <input type="text" class="col-md-3" id="Font-Size">
+          <input type="text" class="col-md-3" id="Font-Size" [formControl]='Anchor_FontSize'>
         </div>
 
         <div class="form-group">
             <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-            <input type="text" class="col-md-3" id="Padding">
+            <input type="text" class="col-md-3" id="Padding" [formControl]='Anchor_Padding'>
           </div>
 
           <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-              <input type="text" class="col-md-3" id="Margin">
+              <input type="text" class="col-md-3" id="Margin" [formControl]='Anchor_Margin'>
             </div>
 
             <div class="form-group">
                 <label for="Focus" class="col-md-3 form-control-sm">Focus</label>
-                <input type="text" class="col-md-3" id="Focus">
+                <input type="text" class="col-md-3" id="Focus" [formControl]='Anchor_Focus'>
               </div>
 
               <div class="form-group">
                   <label for="Visited" class="col-md-3 form-control-sm">Visited</label>
-                  <input type="text" class="col-md-3" id="Visited">
+                  <input type="text" class="col-md-3" id="Visited" [formControl]='Anchor_Visited'>
                 </div>
 
                 <div class="form-group">
                     <label for="Active" class="col-md-3 form-control-sm">Active</label>
-                    <input type="text" class="col-md-3" id="Active">
+                    <input type="text" class="col-md-3" id="Active" [formControl]='Anchor_Active'>
                 </div>
 
     </div>
@@ -270,32 +270,32 @@
 <span id="body-style">Body</span>
   <div class="form-group">
     <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-    <input type="text" class="col-md-3" id="Font-Family">
+    <input type="text" class="col-md-3" id="Font-Family" [formControl]='Body_FontFamily'>
    </div>
 
 <div class="form-group">
 <label for="Color" class="col-md-3 form-control-sm">Color</label>
-<input type="text" class="col-md-3" id="Color">
+<input type="text" class="col-md-3" id="Color" [formControl]='Body_Color'>
 </div>
 
 <div class="form-group">
     <label for="Background-Color" class="col-md-3 form-control-sm">Background-Color</label>
-    <input type="text" class="col-md-3" id="Background-Color">
+    <input type="text" class="col-md-3" id="Background-Color" [formControl]='Body_BackgroundColor'>
   </div>
 
 <div class="form-group">
   <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-  <input type="text" class="col-md-3" id="Font-Size">
+  <input type="text" class="col-md-3" id="Font-Size" [formControl]='Body_FontSize'>
 </div>
 
 <div class="form-group">
     <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-    <input type="text" class="col-md-3" id="Padding">
+    <input type="text" class="col-md-3" id="Padding" [formControl]='Body_Padding'>
   </div>
 
   <div class="form-group">
         <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-      <input type="text" class="col-md-3" id="Margin">
+      <input type="text" class="col-md-3" id="Margin" [formControl]='Body_Margin'>
       </div>
 
   </div>
@@ -316,32 +316,32 @@
               <span id="para-style">P</span>
                 <div class="form-group">
                   <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-                  <input type="text" class="col-md-3" id="Font-Family">
+                  <input type="text" class="col-md-3" id="Font-Family" [formControl]='P_FontFamily'>
                  </div>
       
           <div class="form-group">
               <label for="Color" class="col-md-3 form-control-sm">Color</label>
-              <input type="text" class="col-md-3" id="Color">
+              <input type="text" class="col-md-3" id="Color" [formControl]='P_Color'>
             </div>
 
             <div class="form-group">
                 <label for="Background-Color" class="col-md-3 form-control-sm">Background-Color</label>
-                <input type="text" class="col-md-3" id="Background-Color">
+                <input type="text" class="col-md-3" id="Background-Color" [formControl]='P_BackgroundColor'>
               </div>
       
             <div class="form-group">
                 <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-                <input type="text" class="col-md-3" id="Font-Size">
+                <input type="text" class="col-md-3" id="Font-Size" [formControl]='P_FontSize'>
               </div>
       
               <div class="form-group">
                   <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-                  <input type="text" class="col-md-3" id="Padding">
+                  <input type="text" class="col-md-3" id="Padding" [formControl]='P_Padding'>
                 </div>
       
                 <div class="form-group">
                     <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-                    <input type="text" class="col-md-3" id="Margin">
+                    <input type="text" class="col-md-3" id="Margin" [formControl]='P_Margin'>
                 </div>
       
           </div>
@@ -352,32 +352,32 @@
       <span id="textarea-style">TextArea</span>
         <div class="form-group">
           <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-          <input type="text" class="col-md-3" id="Font-Family">
+          <input type="text" class="col-md-3" id="Font-Family" [formControl]='TextArea_FontFamily'>
          </div>
       
       <div class="form-group">
       <label for="Color" class="col-md-3 form-control-sm">Color</label>
-      <input type="text" class="col-md-3" id="Color">
+      <input type="text" class="col-md-3" id="Color" [formControl]='TextArea_Color'>
       </div>
       
       <div class="form-group">
           <label for="Background-Color" class="col-md-3 form-control-sm">Background-Color</label>
-          <input type="text" class="col-md-3" id="Background-Color">
+          <input type="text" class="col-md-3" id="Background-Color" [formControl]='TextArea_BackgroundColor'>
         </div>
       
       <div class="form-group">
         <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-        <input type="text" class="col-md-3" id="Font-Size">
+        <input type="text" class="col-md-3" id="Font-Size" [formControl]='TextArea_FontSize'>
       </div>
       
       <div class="form-group">
           <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-          <input type="text" class="col-md-3" id="Padding">
+          <input type="text" class="col-md-3" id="Padding" [formControl]='TextArea_Padding'>
         </div>
       
         <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-            <input type="text" class="col-md-3" id="Margin">
+            <input type="text" class="col-md-3" id="Margin" [formControl]='TextArea_Margin'>
             </div>
       
         </div>
@@ -387,6 +387,10 @@
       <hr>
       
       <div class="row float-right" id="submit-btn-style">
+          <button class="btn btn-danger btn-group submit-btn-style" [disabled]="!formGroup.dirty" type="button" (click)="resetForm()">Reset</button>
+        </div>
+
+        <div class="row float-right" id="submit-btn-style" >
           <button class="btn btn-primary btn-group submit-btn-style" type="submit">Submit</button>
         </div>
 

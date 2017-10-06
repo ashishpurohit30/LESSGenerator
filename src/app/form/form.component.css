@@ -1,3 +1,18 @@
+
+.bordered-invalid
+{
+    border: 2px solid red;
+}
+.bordered-valid
+{
+    border: 2px solid green;
+}
+
+.btn-opacity
+{
+    opacity: 0.4;
+}
+
 .top
 {
     margin-bottom: 15px;

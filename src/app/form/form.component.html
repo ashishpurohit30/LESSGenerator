@@ -18,7 +18,10 @@
             <span class="heading-style">H1</span>
               <div class="form-group">
                 <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-                <input type="text" class="col-md-3" id="Font-Family" [formControl]='H1_FontFamily'>
+                <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='H1_FontFamily'> -->
+                <select [formControl]='H1_FontFamily'>
+                  <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+                </select>
                </div>
 
         <div class="form-group">
@@ -28,17 +31,17 @@
 
           <div class="form-group">
               <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-              <input type="text" class="col-md-3" id="Font-Size" [formControl]='H1_FontSize'>
+              <input type="text" class="col-md-3" id="Font-Size" [formControl]='H1_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H1_FontSize.valid && H1_FontSize.touched" [class.bordered-valid]="H1_FontSize.valid && H1_FontSize.touched">
             </div>
 
             <div class="form-group">
                 <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-                <input type="text" class="col-md-3" id="Padding" [formControl]='H1_Padding'>
+                <input type="text" class="col-md-3" id="Padding" [formControl]='H1_Padding' placeholder="Values in px" [class.bordered-invalid]="!H1_Padding.valid && H1_FontSize.touched">
               </div>
 
               <div class="form-group">
                   <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-                  <input type="text" class="col-md-3" id="Margin" [formControl]='H1_Margin'>
+                  <input type="text" class="col-md-3" id="Margin" [formControl]='H1_Margin' placeholder="Values in px" [class.bordered-invalid]="!H1_Margin.valid && H1_Margin.touched">
                 </div>
 
         </div>
@@ -48,7 +51,10 @@
     <span class="heading-style">H2</span>
       <div class="form-group">
         <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-        <input type="text" class="col-md-3" id="Font-Family" [formControl]='H2_FontFamily'>
+        <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='H2_FontFamily'> -->
+        <select [formControl]='H2_FontFamily'>
+          <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+        </select>
        </div>
 
 <div class="form-group">
@@ -58,17 +64,17 @@
 
   <div class="form-group">
       <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-      <input type="text" class="col-md-3" id="Font-Size" [formControl]='H2_FontSize'>
+      <input type="text" class="col-md-3" id="Font-Size" [formControl]='H2_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H2_FontSize.valid && H2_FontSize.touched">
     </div>
 
     <div class="form-group">
         <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-        <input type="text" class="col-md-3" id="Padding" [formControl]='H2_Padding'> 
+        <input type="text" class="col-md-3" id="Padding" [formControl]='H2_Padding' placeholder="Values in px" [class.bordered-invalid]="!H2_Padding.valid && H2_Padding.touched">  
       </div>
 
       <div class="form-group">
             <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-          <input type="text" class="col-md-3" id="Margin" [formControl]='H2_Margin'>
+          <input type="text" class="col-md-3" id="Margin" [formControl]='H2_Margin' placeholder="Values in px" [class.bordered-invalid]="!H2_Margin.valid && H2_Margin.touched">
           </div>
 
       </div>
@@ -83,7 +89,10 @@
         <span class="heading-style">H3</span>
           <div class="form-group">
             <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-            <input type="text" class="col-md-3" id="Font-Family" [formControl]='H3_FontFamily'>
+            <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='H3_FontFamily'> -->
+            <select [formControl]='H3_FontFamily'>
+              <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+            </select>
            </div>
 
     <div class="form-group">
@@ -93,17 +102,17 @@
 
       <div class="form-group">
           <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-          <input type="text" class="col-md-3" id="Font-Size" [formControl]='H3_FontSize'>
+          <input type="text" class="col-md-3" id="Font-Size" [formControl]='H3_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H3_FontSize.valid && H3_FontSize.touched">
         </div>
 
         <div class="form-group">
             <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-            <input type="text" class="col-md-3" id="Padding" [formControl]='H3_Padding'>
+            <input type="text" class="col-md-3" id="Padding" [formControl]='H3_Padding' placeholder="Values in px" [class.bordered-invalid]="!H3_Padding.valid && H3_Padding.touched">
           </div>
 
           <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-              <input type="text" class="col-md-3" id="Margin" [formControl]='H3_Margin'>
+              <input type="text" class="col-md-3" id="Margin" [formControl]='H3_Margin' placeholder="Values in px" [class.bordered-invalid]="!H3_Margin.valid && H3_Margin.touched">
             </div>
 
     </div>
@@ -114,7 +123,10 @@
 <span class="heading-style">H4</span>
   <div class="form-group">
     <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-    <input type="text" class="col-md-3" id="Font-Family" [formControl]='H4_FontFamily'>
+    <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='H4_FontFamily'> -->
+    <select [formControl]='H4_FontFamily'>
+      <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+    </select>
    </div>
 
 <div class="form-group">
@@ -124,17 +136,17 @@
 
 <div class="form-group">
   <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-  <input type="text" class="col-md-3" id="Font-Size" [formControl]='H4_FontSize'>
+  <input type="text" class="col-md-3" id="Font-Size" [formControl]='H4_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H4_FontSize.valid && H4_FontSize.touched">
 </div>
 
 <div class="form-group">
     <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-    <input type="text" class="col-md-3" id="Padding" [formControl]='H4_Padding'>
+    <input type="text" class="col-md-3" id="Padding" [formControl]='H4_Padding' placeholder="Values in px" [class.bordered-invalid]="!H4_Padding.valid && H4_Padding.touched">
   </div>
 
   <div class="form-group">
         <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-      <input type="text" class="col-md-3" id="Margin" [formControl]='H4_Margin'>
+      <input type="text" class="col-md-3" id="Margin" [formControl]='H4_Margin' placeholder="Values in px" [class.bordered-invalid]="!H4_Margin.valid && H4_Margin.touched">
       </div>
 
   </div>
@@ -149,7 +161,10 @@
         <span class="heading-style">H5</span>
           <div class="form-group">
             <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-            <input type="text" class="col-md-3" id="Font-Family" [formControl]='H5_FontFamily'>
+            <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='H5_FontFamily'> -->
+            <select [formControl]='H5_FontFamily'>
+              <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+            </select>
            </div>
 
     <div class="form-group">
@@ -159,17 +174,17 @@
 
       <div class="form-group">
           <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-          <input type="text" class="col-md-3" id="Font-Size" [formControl]='H5_FontSize'>
+          <input type="text" class="col-md-3" id="Font-Size" [formControl]='H5_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H5_FontSize.valid && H5_FontSize.touched">
         </div>
 
         <div class="form-group">
             <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-            <input type="text" class="col-md-3" id="Padding" [formControl]='H5_Padding'> 
+            <input type="text" class="col-md-3" id="Padding" [formControl]='H5_Padding' placeholder="Values in px" [class.bordered-invalid]="!H5_Padding.valid && H5_Padding.touched"> 
           </div>
 
           <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-              <input type="text" class="col-md-3" id="Margin" [formControl]='H5_Margin'>
+              <input type="text" class="col-md-3" id="Margin" [formControl]='H5_Margin' placeholder="Values in px" [class.bordered-invalid]="!H5_Margin.valid && H5_Margin.touched">
             </div>
 
     </div>
@@ -180,7 +195,10 @@
 <span class="heading-style">H6</span>
   <div class="form-group">
     <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-    <input type="text" class="col-md-3" id="Font-Family" [formControl]='H6_FontFamily'>
+    <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='H6_FontFamily'> -->
+    <select [formControl]='H6_FontFamily'>
+      <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+    </select>
    </div>
 
 <div class="form-group">
@@ -190,17 +208,17 @@
 
 <div class="form-group">
   <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-  <input type="text" class="col-md-3" id="Font-Size" [formControl]='H6_FontSize'>
+  <input type="text" class="col-md-3" id="Font-Size" [formControl]='H6_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H6_FontSize.valid && H6_FontSize.touched">
 </div>
 
 <div class="form-group">
     <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-    <input type="text" class="col-md-3" id="Padding" [formControl]='H6_Padding'>
+    <input type="text" class="col-md-3" id="Padding" [formControl]='H6_Padding' placeholder="Values in px" [class.bordered-invalid]="!H6_Padding.valid && H6_Padding.touched">
   </div>
 
   <div class="form-group">
         <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-      <input type="text" class="col-md-3" id="Margin" [formControl]='H6_Margin'>
+      <input type="text" class="col-md-3" id="Margin" [formControl]='H6_Margin' placeholder="Values in px" [class.bordered-invalid]="!H6_Margin.valid && H6_Margin.touched">
       </div>
 
   </div>
@@ -224,7 +242,10 @@
         <span id="anchor-style">Anchor</span>
           <div class="form-group">
             <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-            <input type="text" class="col-md-3" id="Font-Family" [formControl]='Anchor_FontFamily'>
+            <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='Anchor_FontFamily'> -->
+            <select name="Anchor_FontFamily" [formControl]='Anchor_FontFamily' >
+              <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+            </select>
            </div>
 
     <div class="form-group">
@@ -234,20 +255,20 @@
 
       <div class="form-group">
           <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-          <input type="text" class="col-md-3" id="Font-Size" [formControl]='Anchor_FontSize'>
+          <input type="text" class="col-md-3" id="Font-Size"  [formControl]='Anchor_FontSize' placeholder="Values in px" [class.bordered-invalid]="!Anchor_FontSize.valid && Anchor_FontSize.touched">
         </div>
 
         <div class="form-group">
             <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-            <input type="text" class="col-md-3" id="Padding" [formControl]='Anchor_Padding'>
+            <input type="text" class="col-md-3" id="Padding" [formControl]='Anchor_Padding' placeholder="Values in px" [class.bordered-invalid]="!Anchor_Padding.valid && Anchor_Padding.touched">
           </div>
 
           <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-              <input type="text" class="col-md-3" id="Margin" [formControl]='Anchor_Margin'>
+              <input type="text" class="col-md-3" id="Margin" [formControl]='Anchor_Margin' placeholder="Values in px" [class.bordered-invalid]="!Anchor_Margin.valid && Anchor_Margin.touched">
             </div>
 
-            <div class="form-group">
+            <div class="form-group">  
                 <label for="Focus" class="col-md-3 form-control-sm">Focus</label>
                 <input type="text" class="col-md-3" id="Focus" [formControl]='Anchor_Focus'>
               </div>
@@ -270,7 +291,10 @@
 <span id="body-style">Body</span>
   <div class="form-group">
     <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-    <input type="text" class="col-md-3" id="Font-Family" [formControl]='Body_FontFamily'>
+    <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='Body_FontFamily'> -->
+    <select [formControl]='Body_FontFamily'>
+      <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+    </select>
    </div>
 
 <div class="form-group">
@@ -285,17 +309,17 @@
 
 <div class="form-group">
   <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-  <input type="text" class="col-md-3" id="Font-Size" [formControl]='Body_FontSize'>
+  <input type="text" class="col-md-3" id="Font-Size" [formControl]='Body_FontSize' placeholder="Values in px" [class.bordered-invalid]="!Body_FontSize.valid && Body_FontSize.touched">
 </div>
 
 <div class="form-group">
     <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-    <input type="text" class="col-md-3" id="Padding" [formControl]='Body_Padding'>
+    <input type="text" class="col-md-3" id="Padding" [formControl]='Body_Padding' placeholder="Values in px" [class.bordered-invalid]="!Body_Padding.valid && Body_Padding.touched">
   </div>
 
   <div class="form-group">
         <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-      <input type="text" class="col-md-3" id="Margin" [formControl]='Body_Margin'>
+      <input type="text" class="col-md-3" id="Margin" [formControl]='Body_Margin' placeholder="Values in px" [class.bordered-invalid]="!Body_Margin.valid && Body_Margin.touched">
       </div>
 
   </div>
@@ -316,7 +340,10 @@
               <span id="para-style">P</span>
                 <div class="form-group">
                   <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-                  <input type="text" class="col-md-3" id="Font-Family" [formControl]='P_FontFamily'>
+                  <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='P_FontFamily'> -->
+                  <select [formControl]='P_FontFamily'>
+                    <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+                  </select>
                  </div>
       
           <div class="form-group">
@@ -331,17 +358,17 @@
       
             <div class="form-group">
                 <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-                <input type="text" class="col-md-3" id="Font-Size" [formControl]='P_FontSize'>
+                <input type="text" class="col-md-3" id="Font-Size" [formControl]='P_FontSize' placeholder="Values in px" [class.bordered-invalid]="!P_FontSize.valid && P_FontSize.touched">
               </div>
       
               <div class="form-group">
                   <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-                  <input type="text" class="col-md-3" id="Padding" [formControl]='P_Padding'>
+                  <input type="text" class="col-md-3" id="Padding" [formControl]='P_Padding' placeholder="Values in px" [class.bordered-invalid]="!P_Padding.valid && P_Padding.touched">
                 </div>
       
                 <div class="form-group">
                     <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-                    <input type="text" class="col-md-3" id="Margin" [formControl]='P_Margin'>
+                    <input type="text" class="col-md-3" id="Margin" [formControl]='P_Margin' placeholder="Values in px" [class.bordered-invalid]="!P_Margin.valid && P_Margin.touched">
                 </div>
       
           </div>
@@ -352,7 +379,10 @@
       <span id="textarea-style">TextArea</span>
         <div class="form-group">
           <label for="Font-Family" class="col-md-3 form-control-sm">Font-Family</label>
-          <input type="text" class="col-md-3" id="Font-Family" [formControl]='TextArea_FontFamily'>
+          <!-- <input type="text" class="col-md-3" id="Font-Family" [formControl]='TextArea_FontFamily'> -->
+          <select [formControl]='TextArea_FontFamily'>
+            <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+          </select>
          </div>
       
       <div class="form-group">
@@ -367,17 +397,17 @@
       
       <div class="form-group">
         <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-        <input type="text" class="col-md-3" id="Font-Size" [formControl]='TextArea_FontSize'>
+        <input type="text" class="col-md-3" id="Font-Size" [formControl]='TextArea_FontSize' placeholder="Values in px" [class.bordered-invalid]="!TextArea_FontSize.valid && TextArea_FontSize.touched">
       </div>
       
       <div class="form-group">
           <label for="Padding" class="col-md-3 form-control-sm">Padding</label>
-          <input type="text" class="col-md-3" id="Padding" [formControl]='TextArea_Padding'>
+          <input type="text" class="col-md-3" id="Padding" [formControl]='TextArea_Padding' placeholder="Values in px" [class.bordered-invalid]="!TextArea_Padding.valid && TextArea_Padding.touched">
         </div>
       
         <div class="form-group">
               <label for="Margin" class="col-md-3 form-control-sm">Margin</label>
-            <input type="text" class="col-md-3" id="Margin" [formControl]='TextArea_Margin'>
+            <input type="text" class="col-md-3" id="Margin" [formControl]='TextArea_Margin' placeholder="Values in px" [class.bordered-invalid]="!TextArea_Margin.valid && TextArea_Margin.touched">
             </div>
       
         </div>
@@ -387,11 +417,11 @@
       <hr>
       
       <div class="row float-right" id="submit-btn-style">
-          <button class="btn btn-danger btn-group submit-btn-style" [disabled]="!formGroup.dirty" type="button" (click)="resetForm()">Reset</button>
-        </div>
+        <button class="btn btn-danger submit-btn-style" [disabled]="!formGroup.dirty" type="button" (click)="resetForm()">Reset</button>
+      </div>
 
         <div class="row float-right" id="submit-btn-style" >
-          <button class="btn btn-primary btn-group submit-btn-style" type="submit">Submit</button>
+          <button class="btn btn-secondary submit-btn-style" [disabled]="formGroup.invalid" [class.btn-success]="formGroup.valid" type="submit">Submit</button>
         </div>
 
     </form>

@@ -43,6 +43,8 @@ export class FormComponent implements OnInit
   
   }
 
+  fonts:String[];
+
   formGroup:FormGroup;
   H1_FontFamily:AbstractControl; H2_FontFamily:AbstractControl; H3_FontFamily:AbstractControl; 
   H4_FontFamily:AbstractControl; H5_FontFamily:AbstractControl; H6_FontFamily:AbstractControl;
@@ -66,21 +68,24 @@ export class FormComponent implements OnInit
 
   constructor(private formBuilder:FormBuilder)
    { 
+
+    this.fonts=['Arial','Helvetica','Times','Times New Roman','Courier New','Courier','Verdana','Comic Sans MS'];
+
      this.formGroup= formBuilder.group({
-       "H1_FontFamily" : [''], "H1_Color" : [''], "H1_FontSize" : [''], "H1_Padding" : [''], "H1_Margin" : [''],
-       "H2_FontFamily" : [''], "H2_Color" : [''], "H2_FontSize" : [''], "H2_Padding" : [''], "H2_Margin" : [''],
-       "H3_FontFamily" : [''], "H3_Color" : [''], "H3_FontSize" : [''], "H3_Padding" : [''], "H3_Margin" : [''],
-       "H4_FontFamily" : [''], "H4_Color" : [''], "H4_FontSize" : [''], "H4_Padding" : [''], "H4_Margin" : [''],
-       "H5_FontFamily" : [''], "H5_Color" : [''], "H5_FontSize" : [''], "H5_Padding" : [''], "H5_Margin" : [''],
-       "H6_FontFamily" : [''], "H6_Color" : [''], "H6_FontSize" : [''], "H6_Padding" : [''], "H6_Margin" : [''],
-       "Anchor_FontFamily" : [''], "Anchor_Color" : [''], "Anchor_FontSize" : [''], "Anchor_Padding" : [''],
-       "Anchor_Margin" : [''], "Anchor_Focus" : [''], "Anchor_Visited" : [''], "Anchor_Active" : [''],
-       "Body_FontFamily" : [''], "Body_Color" : [''], "Body_FontSize" : [''], 
-       "Body_BackgroundColor" : [''], "Body_Margin" : [''], "Body_Padding" : [''],
-       "P_FontFamily" : [''], "P_Color" : [''], "P_FontSize" : [''],
-       "P_BackgroundColor" : [''], "P_Margin" : [''], "P_Padding" : [''],
-       "TextArea_FontFamily" : [''], "TextArea_Color" : [''], "TextArea_FontSize" : [''],
-       "TextArea_BackgroundColor" : [''], "TextArea_Margin" : [''], "TextArea_Padding" : [''],
+       "H1_FontFamily" : [''], "H1_Color" : [''], "H1_FontSize" : ['',Validators.pattern(/px$/i)], "H1_Padding" : ['',Validators.pattern(/px$/i)], "H1_Margin" : ['',Validators.pattern(/px$/i)],
+       "H2_FontFamily" : [''], "H2_Color" : [''], "H2_FontSize" : ['',Validators.pattern(/px$/i)], "H2_Padding" : ['',Validators.pattern(/px$/i)], "H2_Margin" : ['',Validators.pattern(/px$/i)],
+       "H3_FontFamily" : [''], "H3_Color" : [''], "H3_FontSize" : ['',Validators.pattern(/px$/i)], "H3_Padding" : ['',Validators.pattern(/px$/i)], "H3_Margin" : ['',Validators.pattern(/px$/i)],
+       "H4_FontFamily" : [''], "H4_Color" : [''], "H4_FontSize" : ['',Validators.pattern(/px$/i)], "H4_Padding" : ['',Validators.pattern(/px$/i)], "H4_Margin" : ['',Validators.pattern(/px$/i)],
+       "H5_FontFamily" : [''], "H5_Color" : [''], "H5_FontSize" : ['',Validators.pattern(/px$/i)], "H5_Padding" : ['',Validators.pattern(/px$/i)], "H5_Margin" : ['',Validators.pattern(/px$/i)],
+       "H6_FontFamily" : [''], "H6_Color" : [''], "H6_FontSize" : ['',Validators.pattern(/px$/i)], "H6_Padding" : ['',Validators.pattern(/px$/i)], "H6_Margin" : ['',Validators.pattern(/px$/i)],
+       "Anchor_FontFamily" : [''], "Anchor_Color" : [''], "Anchor_FontSize" : ['',Validators.pattern(/px$/i)], "Anchor_Padding" : ['',Validators.pattern(/px$/i)],
+       "Anchor_Margin" : ['',Validators.pattern(/px$/i)], "Anchor_Focus" : [''], "Anchor_Visited" : [''], "Anchor_Active" : [''],
+       "Body_FontFamily" : [''], "Body_Color" : [''], "Body_FontSize" : ['',Validators.pattern(/px$/i)], 
+       "Body_BackgroundColor" : [''], "Body_Margin" : ['',Validators.pattern(/px$/i)], "Body_Padding" : ['',Validators.pattern(/px$/i)],
+       "P_FontFamily" : [''], "P_Color" : [''], "P_FontSize" : ['',Validators.pattern(/px$/i)],
+       "P_BackgroundColor" : [''], "P_Margin" : ['',Validators.pattern(/px$/i)], "P_Padding" : ['',Validators.pattern(/px$/i)],
+       "TextArea_FontFamily" : [''], "TextArea_Color" : [''], "TextArea_FontSize" : ['',Validators.pattern(/px$/i)],
+       "TextArea_BackgroundColor" : [''], "TextArea_Margin" : ['',Validators.pattern(/px$/i)], "TextArea_Padding" : ['',Validators.pattern(/px$/i)],
      })
      this.H1_FontFamily=this.formGroup.controls['H1_FontFamily'];
      this.H2_FontFamily=this.formGroup.controls['H2_FontFamily'];

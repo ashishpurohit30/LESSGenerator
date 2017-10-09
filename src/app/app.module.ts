@@ -19,6 +19,8 @@ import { AuthenticationService }  from './login/authentication.service';
 import { LoginGuard }  from './login/login.guard';
 import { FormComponent } from './form/form.component';
 
+import {ColorPickerModule, ColorPickerService} from 'angular2-color-picker';
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -6,8 +6,9 @@
     </div>
     <hr>
 
-    <div data-toggle="buttons">
-        <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleHeadingMethod()">Click to show/hide Heading Tag Attributes</button>
+    <div data-toggle="buttons" class="btn-group">
+        <button type="button" class="btn btn-secondary btn-style" id="button-heading-1">Click to show/hide Heading Tag Attributes</button>
+        <button type="button" class="btn btn-secondary btn-style dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleHeadingMethod()"></button>
       </div>
 
     <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
@@ -25,8 +26,9 @@
                </div>
 
         <div class="form-group">
-            <label for="Color" class="col-md-3 form-control-sm">Color</label>
-            <input type="text" class="col-md-3" id="Color" [formControl]='H1_Color'>
+            <label for="Color" class="col-md-3 form-control-sm inp">Color</label>
+            <!-- <span class="input-group-addon" id="sizing-addon1">Color</span> -->
+            <input type="text" class="col-md-3" id="Color" [formControl]='H1_Color' aria-describedby="sizing-addon1">
           </div>
 
           <div class="form-group">
@@ -230,8 +232,9 @@
 <!-- Container of Heading div ends -->
 
 <!-- Container for Anchor and Body tag starts -->
-<div data-toggle="buttons">
-    <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleAnchorMethod()">Click to show/hide Anchor/Body tag Attributes</button>
+<div data-toggle="buttons" class="btn-group">
+    <button type="button" class="btn btn-secondary btn-style" id="button-heading-2">Click to show/hide Anchor/Body tag Attributes</button>
+    <button type="button" class="btn btn-secondary btn-style dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleAnchorMethod()"></button>
   </div>
 
 <!-- For Anchor and Body Tags -->
@@ -328,8 +331,9 @@
 <!-- For Anchor and  Body Tags ends -->
 <hr>
 
-<div data-toggle="buttons">
-    <button type="button" class="btn btn-info btn-block btn-style" id="button-heading" (click)="toggleParaMethod()">Click to show/hide Paragraph/Text-Area tag Attributes</button>
+<div data-toggle="buttons" class="btn-group">
+    <button type="button" class="btn btn-secondary btn-style" id="button-heading-3">Click to show/hide Paragraph/TextArea tag Attributes</button>
+    <button type="button" class="btn btn-secondary btn-style dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleParaMethod()"></button>
   </div>
 
     <!-- For TextArea and Para starts -->
@@ -415,14 +419,17 @@
         </div>
       <!-- For Anchor and  Body Tags ends -->
       <hr>
-      
+
+      <div class="row float-right" id="submit-btn-style" >
+        <button class="btn btn-secondary submit-btn-style" [disabled]="!formGroup.dirty && !formGroup.invalid" [class.btn-success]="formGroup.valid" type="submit">Submit</button>
+      </div>
+
       <div class="row float-right" id="submit-btn-style">
         <button class="btn btn-danger submit-btn-style" [disabled]="!formGroup.dirty" type="button" (click)="resetForm()">Reset</button>
       </div>
 
-        <div class="row float-right" id="submit-btn-style" >
-          <button class="btn btn-secondary submit-btn-style" [disabled]="formGroup.invalid" [class.btn-success]="formGroup.valid" type="submit">Submit</button>
-        </div>
 
     </form>
     </div>
+
+      

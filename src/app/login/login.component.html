@@ -2,7 +2,7 @@
     <div>
     <form *ngIf="!authService.getUser()">
     <fieldset>
-        <legend>Sign in</legend>
+        <legend class="breadcrumb">Sign in</legend>
 <div class="form-group">
     <label for="emailInput">Email address</label>
     <input type="email" class="form-control col-md-3" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" #username>
@@ -17,7 +17,7 @@
 
 <div class="row"> 
     <span class="form-check col-auto">
-        <label>
+        <label id="chkbox-login">
             <input type="checkbox" class="form-check-input" id="chkbox" >
                    Remember Me
           </label>
@@ -37,7 +37,7 @@
 <div *ngIf="authService.getUser()" class="container-fluid clearfix">
     <div class="row relative">
         <div class="breadcrumb col-md-auto absolute"> Logged in as <b>{{ authService.getUser() }}</b>
-            <a href (click)="logout()">Log out</a>
+            <!-- <a href (click)="logout()">Log out</a> -->
         </div>    
     </div>
     <app-form></app-form>   

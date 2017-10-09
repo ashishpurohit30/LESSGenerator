@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, AbstractControl, Validators} from '@angular/forms';
 
+import {ColorPickerModule,ColorPickerService} from 'angular2-color-picker';
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -44,7 +46,6 @@ export class FormComponent implements OnInit
   }
 
   fonts:String[];
-
   formGroup:FormGroup;
   H1_FontFamily:AbstractControl; H2_FontFamily:AbstractControl; H3_FontFamily:AbstractControl; 
   H4_FontFamily:AbstractControl; H5_FontFamily:AbstractControl; H6_FontFamily:AbstractControl;

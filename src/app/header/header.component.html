@@ -5,17 +5,19 @@
         <span class="col-9">
           <a href="index.html"><img src="/assets/images/less.png">Generator</a>
         </span>
-        <span class="links">
+
+        <span class="links" *ngIf="!authService.getUser()">
             <a [routerLink]="['login']" (click)="toggleShow()">Login</a>
         </span>
 
-        <span class="links" *ngIf="false">
-            <a [routerLink]="['login']" (click)="toggleShow()">LogOut</a>
-        </span>
-
-        <span class="links">
+        <span class="links" *ngIf="!authService.getUser()">
           <a [routerLink]="['register']" (click)="toggleShow()">Register</a>
         </span>
+
+        <span class="logout-link" *ngIf="authService.getUser()">
+            <a (click)="toggleShow(); authService.logout()">Logout</a>
+        </span>
+
       </div>
     </nav>
   </div>

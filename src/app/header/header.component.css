@@ -42,6 +42,18 @@ a:hover
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.logout-link
+{
+    margin: 21px 0px 0px 240px;
+}
+
+.logout-link a
+{
+    font-size: 24px;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 div .row
 {
     margin-right: 0px;

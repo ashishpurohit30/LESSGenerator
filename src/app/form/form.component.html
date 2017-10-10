@@ -28,12 +28,12 @@
         <div class="form-group">
             <label for="Color" class="col-md-3 form-control-sm inp">Color</label>
             <!-- <span class="input-group-addon" id="sizing-addon1">Color</span> -->
-            <input type="text" class="col-md-3" id="Color" [formControl]='H1_Color' aria-describedby="sizing-addon1">
+            <input type="text" class="col-md-3" id="Color" [formControl]='H1_Color' [(colorPicker)]="H1_color" [value]="H1_color" [style.background]="H1_color" aria-describedby="sizing-addon1">
           </div>
 
           <div class="form-group">
               <label for="Font-Size" class="col-md-3 form-control-sm">Font-Size</label>
-              <input type="text" class="col-md-3" id="Font-Size" [formControl]='H1_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H1_FontSize.valid && H1_FontSize.touched" [class.bordered-valid]="H1_FontSize.valid && H1_FontSize.touched">
+              <input type="text" class="col-md-3" id="Font-Size" [formControl]='H1_FontSize' placeholder="Values in px" [class.bordered-invalid]="!H1_FontSize.valid && H1_FontSize.touched">
             </div>
 
             <div class="form-group">
@@ -61,7 +61,7 @@
 
 <div class="form-group">
     <label for="Color" class="col-md-3 form-control-sm">Color</label>
-    <input type="text" class="col-md-3" id="Color" [formControl]='H2_Color'>
+    <input type="text" class="col-md-3" id="Color" [(colorPicker)]="H2_color" [value]="H2_color" [style.background]="H2_color" [formControl]='H2_Color'>
   </div>
 
   <div class="form-group">
@@ -99,7 +99,7 @@
 
     <div class="form-group">
         <label for="Color" class="col-md-3 form-control-sm">Color</label>
-        <input type="text" class="col-md-3" id="Color" [formControl]='H3_Color'>
+        <input type="text" class="col-md-3" id="Color" [(colorPicker)]="H3_color" [value]="H3_color" [style.background]="H3_color" [formControl]='H3_Color'>
       </div>
 
       <div class="form-group">
@@ -133,7 +133,7 @@
 
 <div class="form-group">
 <label for="Color" class="col-md-3 form-control-sm">Color</label>
-<input type="text" class="col-md-3" id="Color" [formControl]='H4_Color'>
+<input type="text" class="col-md-3" id="Color" [(colorPicker)]="H4_color" [value]="H4_color" [style.background]="H4_color" [formControl]='H4_Color'>
 </div>
 
 <div class="form-group">
@@ -171,7 +171,7 @@
 
     <div class="form-group">
         <label for="Color" class="col-md-3 form-control-sm">Color</label>
-        <input type="text" class="col-md-3" id="Color" [formControl]='H5_Color'>
+        <input type="text" class="col-md-3" id="Color" [(colorPicker)]="H5_color" [value]="H5_color" [style.background]="H5_color" [formControl]='H5_Color'>
       </div>
 
       <div class="form-group">
@@ -205,7 +205,7 @@
 
 <div class="form-group">
 <label for="Color" class="col-md-3 form-control-sm">Color</label>
-<input type="text" class="col-md-3" id="Color" [formControl]='H6_Color'> 
+<input type="text" class="col-md-3" id="Color" [(colorPicker)]="H6_color" [value]="H6_color" [style.background]="H6_color" [formControl]='H6_Color'> 
 </div>
 
 <div class="form-group">
@@ -253,7 +253,7 @@
 
     <div class="form-group">
         <label for="Color" class="col-md-3 form-control-sm">Color</label>
-        <input type="text" class="col-md-3" id="Color" [formControl]='Anchor_Color'>
+        <input type="text" class="col-md-3" id="Color" [(colorPicker)]="Anchor_color" [value]="Anchor_color" [style.background]="Anchor_color" [formControl]='Anchor_Color'>
       </div>
 
       <div class="form-group">
@@ -302,7 +302,7 @@
 
 <div class="form-group">
 <label for="Color" class="col-md-3 form-control-sm">Color</label>
-<input type="text" class="col-md-3" id="Color" [formControl]='Body_Color'>
+<input type="text" class="col-md-3" id="Color" [(colorPicker)]="Body_color" [value]="Body_color" [style.background]="Body_color" [formControl]='Body_Color'>
 </div>
 
 <div class="form-group">
@@ -352,7 +352,7 @@
       
           <div class="form-group">
               <label for="Color" class="col-md-3 form-control-sm">Color</label>
-              <input type="text" class="col-md-3" id="Color" [formControl]='P_Color'>
+              <input type="text" class="col-md-3" id="Color" [(colorPicker)]="P_color" [value]="P_color" [style.background]="P_color" [formControl]='P_Color'>
             </div>
 
             <div class="form-group">
@@ -391,7 +391,7 @@
       
       <div class="form-group">
       <label for="Color" class="col-md-3 form-control-sm">Color</label>
-      <input type="text" class="col-md-3" id="Color" [formControl]='TextArea_Color'>
+      <input type="text" class="col-md-3" id="Color" [(colorPicker)]="TextArea_color" [value]="TextArea_color" [style.background]="TextArea_color" [formControl]='TextArea_Color'>
       </div>
       
       <div class="form-group">
@@ -427,8 +427,6 @@
       <div class="row float-right" id="submit-btn-style">
         <button class="btn btn-danger submit-btn-style" [disabled]="!formGroup.dirty" type="button" (click)="resetForm()">Reset</button>
       </div>
-
-
     </form>
     </div>
 

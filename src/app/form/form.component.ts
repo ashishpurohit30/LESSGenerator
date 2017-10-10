@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, AbstractControl, Validators} from '@angular/forms';
 
-import {ColorPickerModule,ColorPickerService} from 'angular2-color-picker';
+
 
 @Component({
   selector: 'app-form',
@@ -10,7 +10,18 @@ import {ColorPickerModule,ColorPickerService} from 'angular2-color-picker';
 })
 export class FormComponent implements OnInit 
 {
-/* Methods for Show and Hiding of Divs */
+  H1_color:String='#ffffff'; 
+  H2_color:String='#ffffff'; 
+  H3_color:String='#ffffff'; 
+  H4_color:String='#ffffff'; 
+  H5_color:String='#ffffff'; 
+  H6_color:String='#ffffff'; 
+  Anchor_color:String='#ffffff';
+  Body_color:String='#ffffff';
+  P_color:String='#ffffff';
+  TextArea_color:String='#ffffff';
+
+  /* Methods for Show and Hiding of Divs */
   toggleHeading:boolean=false;
   toggleHeadingMethod()
   {
@@ -73,12 +84,12 @@ export class FormComponent implements OnInit
     this.fonts=['Arial','Helvetica','Times','Times New Roman','Courier New','Courier','Verdana','Comic Sans MS'];
 
      this.formGroup= formBuilder.group({
-       "H1_FontFamily" : [''], "H1_Color" : [''], "H1_FontSize" : ['',Validators.pattern(/px$/i)], "H1_Padding" : ['',Validators.pattern(/px$/i)], "H1_Margin" : ['',Validators.pattern(/px$/i)],
-       "H2_FontFamily" : [''], "H2_Color" : [''], "H2_FontSize" : ['',Validators.pattern(/px$/i)], "H2_Padding" : ['',Validators.pattern(/px$/i)], "H2_Margin" : ['',Validators.pattern(/px$/i)],
-       "H3_FontFamily" : [''], "H3_Color" : [''], "H3_FontSize" : ['',Validators.pattern(/px$/i)], "H3_Padding" : ['',Validators.pattern(/px$/i)], "H3_Margin" : ['',Validators.pattern(/px$/i)],
-       "H4_FontFamily" : [''], "H4_Color" : [''], "H4_FontSize" : ['',Validators.pattern(/px$/i)], "H4_Padding" : ['',Validators.pattern(/px$/i)], "H4_Margin" : ['',Validators.pattern(/px$/i)],
-       "H5_FontFamily" : [''], "H5_Color" : [''], "H5_FontSize" : ['',Validators.pattern(/px$/i)], "H5_Padding" : ['',Validators.pattern(/px$/i)], "H5_Margin" : ['',Validators.pattern(/px$/i)],
-       "H6_FontFamily" : [''], "H6_Color" : [''], "H6_FontSize" : ['',Validators.pattern(/px$/i)], "H6_Padding" : ['',Validators.pattern(/px$/i)], "H6_Margin" : ['',Validators.pattern(/px$/i)],
+       "H1_FontFamily" : [''], "H1_Color" : [''], "H1_FontSize" : ['',Validators.compose([Validators.minLength(3),Validators.maxLength(4),Validators.pattern('^(3[2-9]|([4-9][0-9]))+(px)+$')])], "H1_Padding" : ['',Validators.pattern(/px$/i)], "H1_Margin" : ['',Validators.pattern(/px$/i)],
+       "H2_FontFamily" : [''], "H2_Color" : [''], "H2_FontSize" : ['',Validators.compose([Validators.minLength(3),Validators.maxLength(4),Validators.pattern('^(2[4-9]|([4-8][0-9]))+(px)+$')])], "H2_Padding" : ['',Validators.pattern(/px$/i)], "H2_Margin" : ['',Validators.pattern(/px$/i)],
+       "H3_FontFamily" : [''], "H3_Color" : [''], "H3_FontSize" : ['',Validators.compose([Validators.minLength(3),Validators.maxLength(4),Validators.pattern('^(1[8-9]|([4-7][0-9]))+(px)+$')])], "H3_Padding" : ['',Validators.pattern(/px$/i)], "H3_Margin" : ['',Validators.pattern(/px$/i)],
+       "H4_FontFamily" : [''], "H4_Color" : [''], "H4_FontSize" : ['',Validators.compose([Validators.minLength(3),Validators.maxLength(4),Validators.pattern('^(1[5-9]|([2-6][0-9]))+(px)+$')])], "H4_Padding" : ['',Validators.pattern(/px$/i)], "H4_Margin" : ['',Validators.pattern(/px$/i)],
+       "H5_FontFamily" : [''], "H5_Color" : [''], "H5_FontSize" : ['',Validators.compose([Validators.minLength(3),Validators.maxLength(4),Validators.pattern('^(1[3-9]|([2-5][0-9]))+(px)+$')])], "H5_Padding" : ['',Validators.pattern(/px$/i)], "H5_Margin" : ['',Validators.pattern(/px$/i)],
+       "H6_FontFamily" : [''], "H6_Color" : [''], "H6_FontSize" : ['',Validators.compose([Validators.minLength(3),Validators.maxLength(4),Validators.pattern('^(1[0-9]|([2-4][0-9]))+(px)+$')])], "H6_Padding" : ['',Validators.pattern(/px$/i)], "H6_Margin" : ['',Validators.pattern(/px$/i)],
        "Anchor_FontFamily" : [''], "Anchor_Color" : [''], "Anchor_FontSize" : ['',Validators.pattern(/px$/i)], "Anchor_Padding" : ['',Validators.pattern(/px$/i)],
        "Anchor_Margin" : ['',Validators.pattern(/px$/i)], "Anchor_Focus" : [''], "Anchor_Visited" : [''], "Anchor_Active" : [''],
        "Body_FontFamily" : [''], "Body_Color" : [''], "Body_FontSize" : ['',Validators.pattern(/px$/i)], 

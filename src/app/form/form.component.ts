@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, AbstractControl, Validators} from '@angular/forms';
 
+import { ColorPickerModule } from 'primeng/primeng';
 
 
 @Component({

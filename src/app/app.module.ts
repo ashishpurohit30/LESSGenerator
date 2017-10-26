@@ -20,6 +20,9 @@ import { LoginGuard }  from './login/login.guard';
 import { FormComponent } from './form/form.component';
 
 import { ColorPickerModule } from 'ngx-color-picker';
+import { AccordionModule } from 'primeng/primeng';
+import { MenuItem } from 'primeng/primeng';
+
 
 @NgModule({
   declarations: [

@@ -54,7 +54,6 @@ export class FormComponent implements OnInit
   {
     this.formGroup.reset();
     console.log('reset is called');
-  
   }
 
   fonts:String[];

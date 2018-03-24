@@ -19,9 +19,9 @@ import { AuthenticationService }  from './login/authentication.service';
 import { LoginGuard }  from './login/login.guard';
 import { FormComponent } from './form/form.component';
 
-import { ColorPickerModule } from 'ngx-color-picker';
-import { AccordionModule } from 'primeng/primeng';
-import { MenuItem } from 'primeng/primeng';
+// import { ColorPickerModule } from 'ngx-color-picker';
+// import { AccordionModule } from 'primeng/primeng';
+// import { MenuItem } from 'primeng/primeng';
 
 
 @NgModule({
@@ -35,16 +35,17 @@ import { MenuItem } from 'primeng/primeng';
     FormComponent
   ],
   imports: [
-    BrowserModule, NgbModule.forRoot(),FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes),ColorPickerModule
+    BrowserModule,FormsModule, ReactiveFormsModule, NgbModule.forRoot(),RouterModule.forRoot(routes),
   ],
   providers: 
-  [
+  [ 
     {
       provide: RegisterService,
-      useFactory: ():RegisterService=>new RegisterService()
-    },
+      useFactory: ():RegisterService=>new RegisterService(),
+    },  
     AuthenticationService,LoginGuard
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
